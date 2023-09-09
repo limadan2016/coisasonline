@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+
+.awy-btn {
+  display: block;
+  width: 100%;
+  background: #182025;
+  color: #fff !important;
+  text-decoration: none;
+  border: 0;
+  border-radius: 5px;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 13px;
+  padding: 14px 33px 14px 54px;
+  outline: none;
+  position: relative;
+  transition: background-color 0.2s;
+  margin-bottom: 8px;
+  margin-top: 3px;
+}
+
+.awy-btn::before {
+  display: inline-block;
+  content: "";
+  background: url('images/icon-awy-logo.png') no-repeat;
+  width: 27px;
+  height: 28px;
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  padding-left: 8px;
+  border-right: 1px rgba(255, 255, 255, 0.1) solid;
+}
+
+.awy-btn::after {
+  display: inline-block;
+  content: "";
+  background: url('images/icon-sign-in.png') no-repeat;
+  width: 16px;
+  height: 12px;
+  position: absolute;
+  top: 15px;
+  right: 12px;
+}
+
+.awy-btn:hover {
+  background: #334550;
+  /*background: #5a5e60;*/
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.awy-account-btn {
+  display: block;
+  width: 119%;
+  text-align: left;
+  line-height: 15px;
+  background: #182025;
+  color: #fff !important;
+  text-decoration: none;
+  border: 0;
+  border-radius: 5px;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 14px;
+  padding: 6px 12px 7px 54px;
+  /*padding: 6px 33px 6px 54px;*/
+  outline: none;
+  position: relative;
+  transition: background-color 0.2s;
+  margin: 3px -25px 8px -10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.awy-account-btn::before {
+  display: inline-block;
+  content: "";
+  background: url('images/icon-user.png') no-repeat;
+  width: 27px;
+  height: 28px;
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  padding-left: 8px;
+  border-right: 1px rgba(255, 255, 255, 0.1) solid;
+}
+
+.awy-account-btn::after {
+  display: inline-block;
+  content: "";
+  background: url('images/icon-arrow.png') no-repeat;
+  width: 16px;
+  height: 13px;
+  position: absolute;
+  top: 14px;
+  right: 12px;
+}
+
+.awy-account-btn:hover {
+  background: #334550;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.awy-account-btn p {
+  padding: 0;
+  margin: 0;
+  color: #919191;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.recover-span {
+  text-align: center;
+  padding-left: 25px;
+  padding-right: 25px;
+  display: block;
+}
+.recover-btn {
+  padding-top: 7px;
+  padding-bottom: 0;
+  display: block;
+  color: #fff;
+  vertical-align: top;
+  text-decoration: none;
+  background: url('images/line1.gif') repeat-x 50% top;
+}
+.recover-btn:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: #f9d19b;
+}

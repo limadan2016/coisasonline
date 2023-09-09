@@ -1,0 +1,34 @@
+/**
+* Window popup
+*/
+function popup(url, width, height, name)
+{
+    if (!name)
+    {
+        name = '_popup';
+    }
+
+    window.open(url.replace(/&amp;/g, '&'), name, 'height=' + height + ',resizable=no,scrollbars=yes, width=' + width);
+    return false;
+}   
+function popupFoto(endereco)
+{     
+    Popup = window.open('', 'Janela', 'width = 100, height = 100, top = 50%, left = 50%, scrollbars = no, status = no, toolbar = no, location = no, directories = no, menubar = no, resizable = no, fullscreen = no');
+    Popup.document.open();
+    Popup.document.write("<html><head><title>");
+    Popup.document.write("Imagem ampliada.");
+    Popup.document.write("</title>");
+    Popup.document.write('<script language=' + '\"JavaScript\">');
+    Popup.document.write('function ' + 'resize() {');
+    Popup.document.write('var x = ' + 'document.images[0].width;');
+    Popup.document.write('var y = ' + 'document.images[0].height;');
+    Popup.document.write('this.resizeTo ' + '((x + 17), (y + 85));');
+    Popup.document.write('}');
+    Popup.document.write('</scr' + 'ipt>');
+    Popup.document.write("</head><body leftmargin=0 topmargin=0 MARGINHEIGHT=0 MARGINWIDTH=0 onload=\"resize()\">");
+    Popup.document.write('<center>');
+    Popup.document.write('<img src=\"' + endereco + '\">');
+    Popup.document.write("</center>");
+    Popup.document.write("</body></html>");
+    Popup.document.close();
+}
